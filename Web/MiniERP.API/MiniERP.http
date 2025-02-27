@@ -1,0 +1,4 @@
+@MiniERP_HostAddress = http://localhost:5255
+
+POST {{MiniERP_HostAddress}}/api/Categoria
+Accept: application/json
