@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\MiniERP.Application\MiniERP.Application.csproj" />
     <ProjectReference Include="..\..\Core\MiniERP.CrossCutting\MiniERP.CrossCutting.csproj" />
-    <ProjectReference Include="..\..\Core\MiniERP.Data\MiniERP.Application.csproj" />
     <ProjectReference Include="..\..\Core\MiniERP.Domain\MiniERP.Domain.csproj" />
     <ProjectReference Include="..\..\Core\MiniERP.Infra\MiniERP.Infra.csproj" />
   </ItemGroup>

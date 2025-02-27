@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MiniERP.Data\MiniERP.Application.csproj" />
     <ProjectReference Include="..\MiniERP.Domain\MiniERP.Domain.csproj" />
     <ProjectReference Include="..\MiniERP.Infra\MiniERP.Infra.csproj" />
   </ItemGroup>
