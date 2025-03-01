@@ -25,7 +25,7 @@ namespace MiniERP.Application.Commands.Contato
 
             var response = CreateContatoCommandResponse.EntityToResponse(contato);
 
-            return CommandResponseBase<CreateContatoCommandResponse>.Create(response, true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<CreateContatoCommandResponse>.Create(response);
         }
     }
 }

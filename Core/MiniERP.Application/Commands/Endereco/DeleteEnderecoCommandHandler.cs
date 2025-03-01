@@ -18,7 +18,7 @@ namespace MiniERP.Application.Commands.Endereco
 
             await _enderecoRepository.DeleteAsync<Domain.Entities.Endereco>(endereco.Codigo);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
     }
 }

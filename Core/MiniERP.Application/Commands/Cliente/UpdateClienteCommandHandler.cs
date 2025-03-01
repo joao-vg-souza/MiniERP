@@ -19,7 +19,7 @@ namespace MiniERP.Application.Commands.Cliente
 
             await _clienteRepository.UpdateAsync(cliente);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.Accepted);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
 
         private void UpdateCliente(UpdateClienteCommand request, ref Domain.Entities.Cliente cliente)

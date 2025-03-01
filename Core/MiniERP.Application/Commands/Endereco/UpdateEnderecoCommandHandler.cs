@@ -20,7 +20,7 @@ namespace MiniERP.Application.Commands.Endereco
 
             await _enderecoRepository.UpdateAsync(endereco);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.Accepted);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
 
         private void UpdateEndereco(UpdateEnderecoCommand request, ref Domain.Entities.Endereco endereco)

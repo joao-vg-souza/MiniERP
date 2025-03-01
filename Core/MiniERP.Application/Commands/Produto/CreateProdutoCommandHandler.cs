@@ -28,7 +28,7 @@ namespace MiniERP.Application.Commands.Produto
 
             var response = CreateProdutoCommandResponse.EntityToResponse(produto);
 
-            return CommandResponseBase<CreateProdutoCommandResponse>.Create(response, true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<CreateProdutoCommandResponse>.Create(response);
         }
     }
 }

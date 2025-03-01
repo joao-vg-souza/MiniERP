@@ -20,7 +20,7 @@ namespace MiniERP.Application.Commands.Produto
 
             await _produtoRepository.UpdateAsync(produto);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.Accepted);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
 
         private void UpdateProduto(UpdateProdutoCommand request, ref Domain.Entities.Produto produto)

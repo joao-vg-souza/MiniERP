@@ -20,7 +20,7 @@ namespace MiniERP.Application.Commands.Categoria
 
             await _categoriaRepository.UpdateAsync(categoria);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.Accepted);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
 
         private void UpdateCategoria(UpdateCategoriaCommand request, ref Domain.Entities.Categoria categoria)

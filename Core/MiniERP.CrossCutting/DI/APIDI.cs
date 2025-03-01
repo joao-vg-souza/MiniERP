@@ -13,6 +13,8 @@ namespace MiniERP.CrossCutting.DI
             services.AddTransient<IContatoRepository, ContatoRepository>();
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
             services.AddTransient<IEnderecoRepository, EnderecoRepository>();
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
+            services.AddTransient<IPedidoItemRepository, PedidoItemRepository>();
         }
     }
 }

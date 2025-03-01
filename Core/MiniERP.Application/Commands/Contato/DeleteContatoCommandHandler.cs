@@ -19,7 +19,7 @@ namespace MiniERP.Application.Commands.Contato
 
             await _contatoRepository.DeleteAsync<Domain.Entities.Contato>(contato.Codigo);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
     }
 }

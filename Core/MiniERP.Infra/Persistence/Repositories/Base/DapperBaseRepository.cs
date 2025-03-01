@@ -40,6 +40,15 @@ namespace MiniERP.Infra.Persistence.Repositories.Base
             return await connection.QueryFirstOrDefaultAsync<T>(query, new { Id = id });
         }
 
+        public async Task BulkInsertAsync<T>(IEnumerable<T> entities)
+        {
+            using SqlConnection connection = new(_connString);
+            var tableName = GetTableName<T>();
+
+            var query = $"INSERT INTO dbo.{tableName} ({GetColumns<T>()}) VALUES ({GetColumnsParams<T>()})";
+            await connection.ExecuteAsync(query, entities);
+        }
+
         public async Task<int> InsertAsync<T>(T entity)
         {
             using SqlConnection connection = new(_connString);

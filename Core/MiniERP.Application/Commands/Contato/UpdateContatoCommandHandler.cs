@@ -20,7 +20,7 @@ namespace MiniERP.Application.Commands.Contato
 
             await _contatoRepository.UpdateAsync(contato);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.Accepted);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
 
         private void UpdateContato(UpdateContatoCommand request, ref Domain.Entities.Contato contato)

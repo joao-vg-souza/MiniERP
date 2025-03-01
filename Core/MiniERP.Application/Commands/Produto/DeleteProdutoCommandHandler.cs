@@ -18,7 +18,7 @@ namespace MiniERP.Application.Commands.Produto
 
             await _produtoRepository.DeleteAsync<Domain.Entities.Produto>(request.CodigoProduto);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace MiniERP.Application.Commands.Endereco
             endereco.Id = await _enderecoRepository.InsertAsync(endereco);
 
             var response = CreateEnderecoCommandResponse.EntityToResponse(endereco);
-            return CommandResponseBase<CreateEnderecoCommandResponse>.Create(response, true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<CreateEnderecoCommandResponse>.Create(response);
         }
     }
 }

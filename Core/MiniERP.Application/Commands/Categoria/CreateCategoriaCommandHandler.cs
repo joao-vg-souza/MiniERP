@@ -22,7 +22,7 @@ namespace MiniERP.Application.Commands.Categoria
             categoria.Id = await _categoriaRepository.InsertAsync(categoria);
 
             var response = CreateCategoriaCommandResponse.EntityToResponse(categoria);
-            return CommandResponseBase<CreateCategoriaCommandResponse>.Create(response, true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<CreateCategoriaCommandResponse>.Create(response);
         }
     }
 }

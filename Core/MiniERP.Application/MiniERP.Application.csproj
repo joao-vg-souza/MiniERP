@@ -16,6 +16,7 @@
     <Folder Include="Commands\Cliente\Validation\" />
     <Folder Include="Commands\Contato\Validation\" />
     <Folder Include="Commands\Endereco\Validation\" />
+    <Folder Include="Commands\Pedido\Validation\" />
     <Folder Include="Commands\Produto\Validation\" />
   </ItemGroup>
 

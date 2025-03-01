@@ -18,7 +18,7 @@ namespace MiniERP.Application.Commands.Cliente
 
             await _clienteRepository.DeleteAsync<Domain.Entities.Cliente>(cliente.Codigo);
 
-            return CommandResponseBase<Unit>.Create(new Unit(), true, [], System.Net.HttpStatusCode.OK);
+            return CommandResponseBase<Unit>.Create(new Unit(), System.Net.HttpStatusCode.NoContent);
         }
     }
 }
