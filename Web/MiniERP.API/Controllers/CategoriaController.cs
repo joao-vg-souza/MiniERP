@@ -12,7 +12,7 @@ namespace MiniERP.API.Controllers
         private readonly IMediator _mediator = mediator;
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateCategoriaCommand request)
+        public async Task<IActionResult> Create([FromBody] CreateCategoriaCommand request)
         {
             var result = await _mediator.Send(request);
 
