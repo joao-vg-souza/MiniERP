@@ -1,4 +1,4 @@
-const controller = "/Categoria";
+const controller = "/Produto";
 
 import baseApi from "../base/api.js";
 
@@ -16,6 +16,6 @@ export default Object.assign({
     return await baseApi.get(`${controller}`);
   },
   getById: async function (id) {
-    return await baseApi.get(`${controller}/${id}`);
-  },
+    return await baseApi.get(`${controller}/${id}`)
+  }
 });

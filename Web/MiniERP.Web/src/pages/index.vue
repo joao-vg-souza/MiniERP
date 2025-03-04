@@ -18,9 +18,7 @@ export default {
     },
     methods: {
         async submitEvent() {
-            console.log( JSON.stringify(this.model))
             const response = await this.$controllers.categoria.create(JSON.stringify(this.model));
-            console.log(response)
         }
     }
 }

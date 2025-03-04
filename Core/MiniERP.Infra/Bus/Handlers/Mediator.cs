@@ -11,9 +11,9 @@ namespace MiniERP.Infra.Bus.Handlers
             return _mediator.Send(request, cancellationToken);
         }
 
-        /*public Task<CommandResponseBase<TResponse>> Send<TResponse>(IDomainQuery<TResponse> request, CancellationToken cancellationToken = default)
+        public Task<CommandResponseBase<TResponse>> Send<TResponse>(IDomainQuery<TResponse> request, CancellationToken cancellationToken = default)
         {
             return _mediator.Send(request, cancellationToken);
-        }*/
+        }
     }
 }

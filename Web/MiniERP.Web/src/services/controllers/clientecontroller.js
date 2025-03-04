@@ -1,4 +1,4 @@
-const controller = "/Categoria";
+const controller = "/Cliente";
 
 import baseApi from "../base/api.js";
 

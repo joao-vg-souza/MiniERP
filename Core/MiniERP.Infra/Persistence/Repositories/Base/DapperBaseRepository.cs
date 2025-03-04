@@ -14,6 +14,13 @@ namespace MiniERP.Infra.Persistence.Repositories.Base
             _connString = connString;
         }
 
+        public async Task<IEnumerable<T>> RawQueryAsync<T>(string query, object? param = null)
+        {
+            using SqlConnection connection = new(_connString);
+
+            return await connection.QueryAsync<T>(query, param);
+        }
+
         public async Task DeleteAsync<T>(Guid id)
         {
             using SqlConnection connection = new(_connString);
@@ -27,7 +34,7 @@ namespace MiniERP.Infra.Persistence.Repositories.Base
             using SqlConnection connection = new(_connString);
             var tableName = GetTableName<T>();
 
-            var query = $"SELECT * FROM dbo.{tableName}";
+            var query = $"SELECT * FROM dbo.{tableName} WITH (NOLOCK)";
             return await connection.QueryAsync<T>(query);
         }
 
@@ -36,7 +43,7 @@ namespace MiniERP.Infra.Persistence.Repositories.Base
             using SqlConnection connection = new(_connString);
             var tableName = GetTableName<T>();
 
-            var query = $"SELECT * FROM dbo.{tableName} WHERE Codigo = @Id";
+            var query = $"SELECT * FROM dbo.{tableName} WITH (NOLOCK) WHERE Codigo = @Id";
             return await connection.QueryFirstOrDefaultAsync<T>(query, new { Id = id });
         }
 

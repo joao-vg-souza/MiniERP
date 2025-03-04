@@ -1,5 +1,5 @@
-﻿using MiniERP.Application.Commands.DTOs.PedidoItem;
-using MiniERP.Application.Commands.Pedido.Response;
+﻿using MiniERP.Application.Commands.Pedido.Response;
+using MiniERP.Application.DTOs.PedidoItem;
 using MiniERP.Infra.Bus.Contracts;
 
 namespace MiniERP.Application.Commands.Pedido.Command

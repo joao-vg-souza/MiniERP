@@ -8,5 +8,7 @@
         Task UpdateAsync<T>(T entity);
         Task DeleteAsync<T>(Guid id);
         Task BulkInsertAsync<T>(IEnumerable<T> entities);
+
+        Task <IEnumerable<T>> RawQueryAsync<T>(string query, object? param);
     }
 }
